@@ -60,13 +60,13 @@ if "memory" not in st.session_state:
                                      "content": "万能对话机器人"}]
 col1 = st.columns(20)
 with col1[0]:
-    st.page_link("./🏠 首页.py", label='', icon="⚙",help="设置")
+    st.page_link("./首页.py", label='', icon="⚙",help="设置")
 with col1[1]:
-    st.page_link("./🏠 首页.py", label='', icon="💒",help="首页")
+    st.page_link("./首页.py", label='', icon="💒",help="首页")
 with col1[2]:
-    st.page_link("./🏠 首页.py", label='', icon="🤡",help="面具")
+    st.page_link("./首页.py", label='', icon="🤡",help="面具")
 with col1[3]:
-    st.page_link("./🏠 首页.py", label='', icon="🤖",help="机器人")
+    st.page_link("./首页.py", label='', icon="🤖",help="机器人")
 
 
 st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
