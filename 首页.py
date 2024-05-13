@@ -88,6 +88,36 @@ with col12:
     st.page_link("pages/7_🖼 以文生图.py"  ,label="以文生图", icon="8️⃣")
 
 
+#============面具样式设计部分=============================
+# 面具部分的按钮
+button_style_image = """
+    <style>
+    [data-testid="stHorizontalBlock"] {
+        //background-color: #ccffff;
+        border-radius: 5px;
+        height:200%;
+        padding-left:10px;
+        padding-top:10px;
+        padding-bottom:10px;
+
+        
+    }
+    </style>
+"""
+st.markdown(button_style_image, unsafe_allow_html=True)
+#页面跳转按钮代码
+diliver_image = """
+    <style>
+    [data-testid="stPageLink-NavLink"] {
+        background-color:#66ccff;
+        height:45px;
+        box-shadow: 2px 2px 5px grey;
+    }
+    </style>
+"""
+st.markdown(diliver_image, unsafe_allow_html=True)
+
+
 
 #分割线条
 st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
