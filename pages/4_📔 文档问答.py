@@ -1,9 +1,8 @@
 from langchain_openai import  ChatOpenAI
 import streamlit as st
-from langchain_community.document_loaders import TextLoader
+
 import sys
-# sys.path.append('../namemodule')
-# from langchain.document_loaders import PyMuPDFLoader
+
 import os
 
 sys.path.append('../namemodule')
