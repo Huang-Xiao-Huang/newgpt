@@ -1,7 +1,5 @@
 from langchain_openai import  ChatOpenAI
 import streamlit as st
-import os
-from PIL import Image
 import sys
 
 sys.path.append('../namemodule')
