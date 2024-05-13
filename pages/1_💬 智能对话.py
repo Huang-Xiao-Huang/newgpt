@@ -1,7 +1,7 @@
 import streamlit as st
 from langchain.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
-import  subprocess
+
 
 #导入相关的包
 import sys
