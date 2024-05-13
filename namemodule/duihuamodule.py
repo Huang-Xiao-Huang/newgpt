@@ -1,7 +1,6 @@
 from langchain_openai import ChatOpenAI
 from langchain.chains import ConversationChain
 from langchain.memory import ConversationBufferMemory
-from langchain.memory import  ConversationSummaryBufferMemory
 
 
 #聊天机器人模型
