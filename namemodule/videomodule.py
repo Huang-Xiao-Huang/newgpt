@@ -1,6 +1,5 @@
 from langchain.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
-from langchain_community.utilities import WikipediaAPIWrapper
 
 #输入相关的文件
 def generate_script(subject,video_length,creativity,api_key):
