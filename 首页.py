@@ -8,11 +8,9 @@ if "OPENAI_API_KEY" not in st.session_state:
     st.session_state["OPENAI_API_KEY"] = ''
 
 
-
 # 页面设置
 st.set_page_config(page_title="AI 智能小工具",layout= "wide",page_icon="👀")
 st.title(":red[TOO] 酷智能工具")
-
 
 
 
@@ -44,28 +42,6 @@ col1,col2 = st.columns([3,1])
 with col1:
     openai_api_key = st.text_input(label= "请输入api_key",type="password")
     saved = st.button("💾 保存")
-
-
-
-    # 定义自定义 CSS 样式
-    html = """
-    <style>
-    .custom-button {
-        height: 50px; /* 设置按钮高度为50px */
-        line-height: 50px; /* 垂直居中文本 */
-        text-align: center; /* 文本水平居中 */
-        background-color: lightblue;
-        color: black;
-        font-size: 16px;
-        font-weight: bold;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    </style>
-    """
-
-    # 在页面上渲染自定义样式
-    st.markdown(html, unsafe_allow_html=True)
 
 
 
@@ -112,35 +88,6 @@ with col12:
     st.page_link("pages/7_🖼 以文生图.py"  ,label="以文生图", icon="8️⃣")
 
 
-
-#============面具样式设计部分=============================
-# 面具部分的按钮
-button_style_image = """
-    <style>
-    [data-testid="stHorizontalBlock"] {
-        //background-color: #ccffff;
-        border-radius: 5px;
-        height:200%;
-        padding-left:10px;
-        padding-top:10px;
-        padding-bottom:10px;
-
-        
-    }
-    </style>
-"""
-st.markdown(button_style_image, unsafe_allow_html=True)
-#页面跳转按钮代码
-diliver_image = """
-    <style>
-    [data-testid="stPageLink-NavLink"] {
-        background-color:#66ccff;
-        height:45px;
-        box-shadow: 2px 2px 5px grey;
-    }
-    </style>
-"""
-st.markdown(diliver_image, unsafe_allow_html=True)
 
 #分割线条
 st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
