@@ -1,14 +1,7 @@
 #paf 回答
 from langchain.prompts import ChatPromptTemplate
-from langchain_openai import ChatOpenAI
 #txt回答
-from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
-
-from langchain_community.vectorstores import FAISS
-from langchain_openai.embeddings import OpenAIEmbeddings
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-
 
 from langchain.chains import ConversationalRetrievalChain
 from langchain_community.document_loaders import PyPDFLoader
@@ -19,8 +12,6 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from langchain_community.document_loaders import TextLoader
 
-
-import  tempfile
 
 
 def pdf_agent(api_key, memory, uploaded_file, question):
