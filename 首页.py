@@ -9,11 +9,9 @@ if "OPENAI_API_KEY" not in st.session_state:
 
 
 
-
 # 页面设置
 st.set_page_config(page_title="AI 智能小工具",layout= "wide",page_icon="👀")
 st.title(":red[TOO] 酷智能工具")
-
 
 
 
@@ -30,11 +28,6 @@ with col3:
     st.markdown('<div class="metric-container-3">💧 Humidity<br><span class="custom-text">💻 AICG</span><br>🛠 实用</div>', unsafe_allow_html=True)
 
 
-
-
-# st.title(":red[TOO] 酷智能工具")
-#st.subheader(":blue[快捷 | 方便 | 准确]")
-
 #===============侧边栏信息============================
 with st.sidebar:
     st.subheader('TOO 酷')
@@ -43,21 +36,6 @@ with st.sidebar:
     st.write("💡 开发者: 哒哒er")
 
 
-# ============分割线样式=========
-st.markdown(
-    """
-    <style>
-    .custom-divider {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        border-top: 1px solid red;
-        color:red;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
 
 # 设置部分
 st.markdown("##### ⚙ 基本设置")
