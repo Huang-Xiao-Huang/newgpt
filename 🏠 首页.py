@@ -1,16 +1,10 @@
 import streamlit as st
 
-
-
-
 #==============首页信息==================
 chat = None
 #如果openai没有在会话中(会话的作用是存储一些历史信息),则设置为空
 if "OPENAI_API_KEY" not in st.session_state:
     st.session_state["OPENAI_API_KEY"] = ''
-
-
-
 
 # 页面设置
 st.set_page_config(page_title="AI 智能小工具",layout= "wide",page_icon="👀")
