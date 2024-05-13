@@ -10,9 +10,6 @@ if "OPENAI_API_KEY" not in st.session_state:
 st.set_page_config(page_title="AI 智能小工具",layout= "wide",page_icon="👀")
 st.title(":red[TOO] 酷智能工具")
 
-#显示图片
-# image = open(r"D:\AI 大语言模型项目\bigdemo\index1.jpg", 'rb').read()
-# st.image(image)
 
 
 # =============banner============
@@ -148,35 +145,35 @@ st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
 st.markdown("##### 🕶 挑选文字面具")
 col1, col2, col3,col4,col5,col6 = st.columns(6)
 with col1:
-    st.page_link("./pages/1_💬 智能对话.py", label=" 智能对话 ", icon="1️⃣")
+    st.page_link("/pages/1_💬 智能对话.py", label=" 智能对话 ", icon="1️⃣")
 
 with col2:
-    st.page_link("./pages/2_📕 小红书文案.py", label="小红书文案 ", icon="2️⃣")
+    st.page_link("/pages/2_📕 小红书文案.py", label="小红书文案 ", icon="2️⃣")
 
 with col3:
-    st.page_link("./pages/3_📺 视频文案.py", label=" 视频文案 ", icon="3️⃣")
+    st.page_link("/pages/3_📺 视频文案.py", label=" 视频文案 ", icon="3️⃣")
 
 with col4:
-    st.page_link("./pages/4_📔 文档问答.py", label=" PDF问答 ", icon="4️⃣")
+    st.page_link("/pages/4_📔 文档问答.py", label=" PDF问答 ", icon="4️⃣")
 
 with col5:
-    st.page_link("./pages/5_📁 文本摘要.py", label=" 文本摘要 ", icon="5️⃣")
+    st.page_link("/pages/5_📁 文本摘要.py", label=" 文本摘要 ", icon="5️⃣")
 
 
 col6,col7, col8,col9,col10 = st.columns(5)
 with col6:
-    st.page_link("./pages/9_📝 简历书写.py", label="简历书写 ", icon="9️⃣")
+    st.page_link("/pages/9_📝 简历书写.py", label="简历书写 ", icon="9️⃣")
 
 st.markdown("##### 🕶 挑选图片面具")
 col11, col12, col13, col14, col15 = st.columns(5)
 with col11:
-    st.page_link("./pages/6_📷 识图工具.py", label=" 识图工具 ", icon="6️⃣")
+    st.page_link("/pages/6_📷 识图工具.py", label=" 识图工具 ", icon="6️⃣")
 
 with col12:
-    st.page_link("./pages/7_💟 图片描述.py"  ,label="图片描述", icon="7️⃣")
+    st.page_link("/pages/7_💟 图片描述.py"  ,label="图片描述", icon="7️⃣")
 
 with col13:
-    st.page_link("./pages/8_🖼 以文生图.py"  ,label="以文生图", icon="8️⃣")
+    st.page_link("/pages/8_🖼 以文生图.py"  ,label="以文生图", icon="8️⃣")
 
 
 
