@@ -11,46 +11,6 @@ st.set_page_config(page_title="AI 智能小工具",layout= "wide",page_icon="�
 st.title(":red[TOO] 酷智能工具")
 
 
-
-# =============banner============
-# 定义不同的 CSS 样式
-html = """
-<style>
-.metric-container-1 {
-    background-color: lightblue;
-    color: black; /* 设置字体颜色为黑色 */
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px grey;
-}
-
-.metric-container-2 {
-    background-color: lightgreen;
-    color: black; /* 设置字体颜色为白色 */
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px grey;
-}
-
-.metric-container-3 {
-    background-color: lightcoral;
-    color: black; /* 设置字体颜色为黑色 */
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px grey;
-}
-
-.custom-text {
-    font-weight: bold;
-    color: #FF5733; /* 设置自定义颜色 */
-    font-size: 20px; /* 设置字体大小为20px */
-}
-</style>
-"""
-
-# 在页面上渲染自定义样式
-st.markdown(html, unsafe_allow_html=True)
-
 # 创建三个列
 col1, col2, col3 = st.columns(3)
 # 在每个列中创建 metric 组件，并为每个组件应用不同的样式
@@ -64,10 +24,6 @@ with col3:
 
 
 
-
-# st.title(":red[TOO] 酷智能工具")
-#st.subheader(":blue[快捷 | 方便 | 准确]")
-
 #===============侧边栏信息============================
 with st.sidebar:
     st.subheader('TOO 酷')
@@ -76,21 +32,6 @@ with st.sidebar:
     st.write("💡 开发者: 哒哒er")
 
 
-# ============分割线样式=========
-st.markdown(
-    """
-    <style>
-    .custom-divider {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        border-top: 1px solid red;
-        color:red;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
 
 # 设置部分
 st.markdown("##### ⚙ 基本设置")
@@ -103,33 +44,7 @@ with col1:
 
 
 
-    # 定义自定义 CSS 样式
-    html = """
-    <style>
-    .custom-button {
-        height: 50px; /* 设置按钮高度为50px */
-        line-height: 50px; /* 垂直居中文本 */
-        text-align: center; /* 文本水平居中 */
-        background-color: lightblue;
-        color: black;
-        font-size: 16px;
-        font-weight: bold;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    </style>
-    """
 
-    # 在页面上渲染自定义样式
-    st.markdown(html, unsafe_allow_html=True)
-
-    # 创建一个自定义样式的按钮
-    # button_html = '<button class="custom-button">Custom Button</button>'
-    # saved = st.markdown(button_html, unsafe_allow_html=True)
-    # if st.markdown(button_html, unsafe_allow_html=True):
-    #     st.session_state["OPENAI_API_KEY"] = openai_api_key
-    #     st.info("你的api已经保存")
-#st.markdown("[获取OpenAI API密钥](https://platform.openai.com/account/api-keys)")
 
 
 #提交保存按钮
@@ -176,36 +91,7 @@ with col13:
     st.page_link("/pages/8_🖼 以文生图.py"  ,label="以文生图", icon="8️⃣")
 
 
-
-#============面具样式设计部分=============================
-# 面具部分的按钮
-button_style_image = """
-    <style>
-    [data-testid="stHorizontalBlock"] {
-        //background-color: #ccffff;
-        border-radius: 5px;
-        height:200%;
-        padding-left:10px;
-        padding-top:10px;
-        padding-bottom:10px;
-
-        
-    }
-    </style>
-"""
 st.markdown(button_style_image, unsafe_allow_html=True)
-#页面跳转按钮代码
-diliver_image = """
-    <style>
-    [data-testid="stPageLink-NavLink"] {
-        background-color:#66ccff;
-        height:45px;
-        box-shadow: 2px 2px 5px grey;
-    }
-    </style>
-"""
-st.markdown(diliver_image, unsafe_allow_html=True)
-
 #分割线条
 st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
 
