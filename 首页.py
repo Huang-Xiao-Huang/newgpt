@@ -75,6 +75,21 @@ with st.sidebar:
     st.write("💡 开发者: 哒哒er")
 
 
+# ============分割线样式=========
+st.markdown(
+    """
+    <style>
+    .custom-divider {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-top: 1px solid red;
+        color:red;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
 
 # 设置部分
 st.markdown("##### ⚙ 基本设置")
