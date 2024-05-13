@@ -3,7 +3,7 @@ import streamlit as st
 import sys
 
 sys.path.append('../namemodule')
-from namemodule.shitumodule import  shiTu
+
 
 #图片分类
 if "OPENAI_API_KEY" not in st.session_state:
