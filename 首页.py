@@ -14,6 +14,47 @@ st.title(":red[TOO] 酷智能工具")
 
 
 
+# =============banner============
+# 定义不同的 CSS 样式
+html = """
+<style>
+.metric-container-1 {
+    background-color: lightblue;
+    color: black; /* 设置字体颜色为黑色 */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px grey;
+}
+
+.metric-container-2 {
+    background-color: lightgreen;
+    color: black; /* 设置字体颜色为白色 */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px grey;
+}
+
+.metric-container-3 {
+    background-color: lightcoral;
+    color: black; /* 设置字体颜色为黑色 */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px grey;
+}
+
+.custom-text {
+    font-weight: bold;
+    color: #FF5733; /* 设置自定义颜色 */
+    font-size: 20px; /* 设置字体大小为20px */
+}
+</style>
+"""
+
+# 在页面上渲染自定义样式
+st.markdown(html, unsafe_allow_html=True)
+
+
+
 # 创建三个列
 col1, col2, col3 = st.columns(3)
 # 在每个列中创建 metric 组件，并为每个组件应用不同的样式
