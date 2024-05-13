@@ -75,7 +75,7 @@ with col5:
 
 col6,col7, col8,col9,col10 = st.columns(5)
 with col6:
-    st.page_link("/pages/8_📝 简历书写.py", label="简历书写 ", icon="9️⃣")
+    st.page_link("pages/8_📝 简历书写.py", label="简历书写 ", icon="9️⃣")
 
 st.markdown("##### 🕶 挑选图片面具")
 col11, col12, col13, col14, col15 = st.columns(5)
