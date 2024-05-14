@@ -32,36 +32,6 @@ st.subheader("🤫 文档解答 🤫")
 chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"],
                                          openai_api_base="https://api.aigc369.com/v1")
 
-#上传文件
-
-# def  pdf_answers():
-#  # 读取PDF文件
-#     if folder_path:
-#         path = os.path.join('.',folder_path.name)
-#         with open(path,'wb') as f:
-#             f.write(folder_path.getbuffer())
-#         docs = load_pdf(path)
-#         # text_splitter = RecursiveCharacterTextSplitter(chunk_size=1050, chunk_overlap=0)
-#         # split_docs = text_splitter.split_documents(docs)
-#         return docs
-
-# def txt_process(folder_path):
-    #读取txt内容
-    # path = os.path.join('./',folder_path)
-    # loader = TextLoader(path, encoding="gbk")
-    # docs = loader.load()
-    # return docs
-
-# def load_pdf(PDF_NAME):
-#     return PyMuPDFLoader(PDF_NAME).load()
-
-folder_path = st.file_uploader(":red[🗂]上传txt或PDF文档", type=["PDF","TXT"], help="文档格式",
-                                 label_visibility="visible")
-input_questions = st.text_input("📑 请输入你的问题")
-
-# if folder_path and input_questions and not st.session_state["OPENAI_API_KEY"] :
-#     st.info("请输入你的OpenAI API密钥")
-
 if folder_path and input_questions and st.session_state["OPENAI_API_KEY"]:
     if folder_path.name.split('.')[-1] == "pdf":
         with st.spinner("AI正在思考中，请稍等..."):
@@ -70,21 +40,10 @@ if folder_path and input_questions and st.session_state["OPENAI_API_KEY"]:
             st.write("### 答案")
             st.write(response["answer"])
             st.session_state["chat_history"] = response["chat_history"]
-#
+
     elif folder_path.name.split('.')[-1] == "txt":
         print(folder_path)
-        # print(folder_path.read())
-        # content_bytes = folder_path.read().decode('utf-8')
-        # # with open ('./ww.txt',"a",encoding="utf-8") as f:
-        # #     f.write(content_bytes)
-        # # 假设我们想要保存上传的内容到服务器的某个文件中
-        # server_file_path = "uploaded_content.txt"
-        # # 写入内容到服务器的文件系统中
-        # with open(server_file_path, "w", encoding="utf-8") as f:
-        #     f.write(content_bytes)
-
-            # path = os.path.join('.', folder_path)
-        # print(path)
+       
         response = txt_answer(st.session_state["OPENAI_API_KEY"], st.session_state["memory1"],
                                 folder_path, input_questions)
         st.write("### 答案")
