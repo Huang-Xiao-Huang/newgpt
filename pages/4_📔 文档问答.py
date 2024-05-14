@@ -1,6 +1,5 @@
 from langchain_openai import  ChatOpenAI
 import streamlit as st
-from langchain_community.document_loaders import TextLoader
 import sys
 
 import os
@@ -31,6 +30,10 @@ st.title("Too酷 :red[文档问答]")
 st.subheader("🤫 文档解答 🤫")
 chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"],
                                          openai_api_base="https://api.aigc369.com/v1")
+
+folder_path = st.file_uploader(":red[🗂]上传txt或PDF文档", type=["PDF","TXT"], help="文档格式",
+                                 label_visibility="visible")
+input_questions = st.text_input("📑 请输入你的问题")
 
 if folder_path and input_questions and st.session_state["OPENAI_API_KEY"]:
     if folder_path.name.split('.')[-1] == "pdf":
