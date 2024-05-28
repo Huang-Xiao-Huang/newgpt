@@ -19,12 +19,12 @@ if "OPENAI_API_KEY" not in st.session_state:
 elif st.session_state["OPENAI_API_KEY"] != '':
     # chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"],
     #                                      openai_api_base="https://api.aigc369.com/v1")
-    chat = ChatOpenAI(model="gpt-4.0-turbo",openai_api_base="https://api.aigc369.com/v1",
-                                          openai_api_key = "sk-8DdVVv5xOLRoSdLN5d1274Dc70514a40Be4684F7C152F04c")
+    chat = ChatOpenAI(model="gpt-4-turbo",openai_api_base="https://api.aigc369.com/v1",
+                                          openai_api_key = "sk-3iArVqOEy5dZbahw2b28D0849eFf4c13BdDa4a257b862cCa")
 
 st.session_state["OPENAI_API_KEY"] = 'sk-8DdVVv5xOLRoSdLN5d1274Dc70514a40Be4684F7C152F04c'
 chat = ChatOpenAI(model="gpt-4-turbo",openai_api_base="https://api.aigc369.com/v1",
-                                          openai_api_key = "sk-8DdVVv5xOLRoSdLN5d1274Dc70514a40Be4684F7C152F04c")
+                                          openai_api_key = "sk-3iArVqOEy5dZbahw2b28D0849eFf4c13BdDa4a257b862cCa")
 
 
 st.set_page_config(
