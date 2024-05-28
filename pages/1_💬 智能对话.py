@@ -23,7 +23,7 @@ elif st.session_state["OPENAI_API_KEY"] != '':
                                           openai_api_key = "sk-8DdVVv5xOLRoSdLN5d1274Dc70514a40Be4684F7C152F04c")
 
 st.session_state["OPENAI_API_KEY"] = 'sk-8DdVVv5xOLRoSdLN5d1274Dc70514a40Be4684F7C152F04c'
-chat = ChatOpenAI(model="gpt-4-turbo",openai_api_base="https://api.aigc369.com/v1",
+chat = ChatOpenAI(model="gpt-4.0-turbo",openai_api_base="https://api.aigc369.com/v1",
                                           openai_api_key = "sk-8DdVVv5xOLRoSdLN5d1274Dc70514a40Be4684F7C152F04c")
 
 
