@@ -24,7 +24,7 @@ st.subheader("🤫 文本摘要")
 uploaded_file = st.file_uploader( ":red[🗂]上传文件",type=["PDF","DOCX","TXT"],help="支持文件类型",
                                   label_visibility = "visible")
 
-shengc = st.button(" ✏ 生成总结")
+shengc = st.button(" ✏ 生成摘要")
 if chat:
     if uploaded_file is not None:
         file_contents  = uploaded_file.getvalue().decode("utf-8")
