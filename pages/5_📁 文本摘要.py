@@ -43,7 +43,7 @@ if chat:
         
 else:
     st.warning("请在首页输入api-key")
-    st.stop()
+    # st.stop()
 
 
 
