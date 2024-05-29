@@ -46,7 +46,7 @@ if client:
     Prompt12 = st.text_input("🎨 请输入图片描述")
     bttons = st.button("💾按钮")
 
-    Prompt = f"{Prompt12}" + f"图片风格是{options[0]}"
+    Prompt = f"你现在是一名著名画家,请画一幅{Prompt12}画,要求{options[0]}风格"
     print(Prompt)
 
     if bttons:
