@@ -11,8 +11,8 @@ elif st.session_state["OPENAI_API_KEY"] != '':
 
 st.set_page_config(page_title="文本总结",layout="wide")
 
-st.title("Too酷 :red[文本总结]")
-st.subheader("🤫 文本总结")
+st.title("Too酷 :red[文本摘要]")
+st.subheader("🤫 文本摘要")
 
 chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"],
                                          openai_api_base="https://api.aigc369.com/v1")
@@ -28,7 +28,7 @@ if chat:
     if uploaded_file is not None:
         file_contents  = uploaded_file.getvalue().decode("utf-8")
         # 将文件内容显示在界面上
-        with st.expander(" 🗂 文件内容:"):
+        with st.expander(" 🗂 显示文件内容:"):
             st.write(file_contents)
         if shengc:
             try:
@@ -40,11 +40,10 @@ if chat:
                 st.warning("获取失败")
     else:
         st.warning("请重新上传文件...")
-        st.stop()
-
+        
 else:
     st.warning("请在首页输入api-key")
-
+    st.stop()
 
 
 
