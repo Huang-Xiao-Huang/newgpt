@@ -13,6 +13,7 @@ from langchain.memory import ConversationBufferMemory
 #文档问答
 if "OPENAI_API_KEY" not in st.session_state:
     st.session_state["OPENAI_API_KEY"] = ''
+    st.warning("请在首页输入OPENAI_API_KEY")
 elif st.session_state["OPENAI_API_KEY"] != '':
     chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"],
                                          openai_api_base="https://api.aigc369.com/v1")
