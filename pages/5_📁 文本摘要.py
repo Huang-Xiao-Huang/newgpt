@@ -9,7 +9,7 @@ elif st.session_state["OPENAI_API_KEY"] != '':
     chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"],
                                          openai_api_base="https://api.aigc369.com/v1")
 
-st.set_page_config(page_title="文本总结",layout="wide")
+st.set_page_config(page_title="文本摘要",layout="wide")
 
 st.title("Too酷 :red[文本摘要]")
 st.subheader("🤫 文本摘要")
