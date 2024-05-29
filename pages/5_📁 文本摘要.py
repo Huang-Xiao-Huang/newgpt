@@ -31,14 +31,12 @@ if chat:
         # 将文件内容显示在界面上
         with st.expander(" 🗂 显示文件内容:"):
             st.write(file_contents)
-        if shengc:
-            try:
-                with st.spinner("AI努力创作中，请稍等..."):
-                    st.divider()
-                    data = zaiyaomodule.Sumary(file_contents, st.session_state["OPENAI_API_KEY"])
-                    st.write(f'''{data} :balloon:''')
-            except:
-                st.warning("获取失败")
+     
+        with st.spinner("AI努力创作中，请稍等..."):
+            st.divider()
+            data = zaiyaomodule.Sumary(file_contents, st.session_state["OPENAI_API_KEY"])
+            st.write(f'''{data} :balloon:''')
+   
     else:
         st.warning("请重新上传文件...")
 else:
