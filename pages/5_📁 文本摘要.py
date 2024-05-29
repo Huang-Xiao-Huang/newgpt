@@ -38,7 +38,7 @@ if chat:
                     st.write(f'''{data} :balloon:''')
             except:
                 st.warning("获取失败")
-     else:
+    else:
         st.warning("请重新上传文件...")
 else:
     st.warning("请在首页输入api-key")
