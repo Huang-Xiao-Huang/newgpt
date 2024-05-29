@@ -29,8 +29,8 @@ if "memory1" not in st.session_state:
 st.set_page_config(page_title="文档问答",layout="wide")
 st.title("Too酷 :red[文档问答]")
 st.subheader("🤫 文档解答 🤫")
-chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"],
-                                         openai_api_base="https://api.aigc369.com/v1")
+# chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"],
+#                                          openai_api_base="https://api.aigc369.com/v1")
 
 folder_path = st.file_uploader(":red[🗂]上传txt或PDF文档", type=["PDF","TXT"], help="文档格式",
                                  label_visibility="visible")
