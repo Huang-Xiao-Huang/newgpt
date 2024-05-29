@@ -54,7 +54,7 @@ if folder_path and input_questions and st.session_state["OPENAI_API_KEY"]:
         st.write(response["answer"])
         st.session_state["chat_history"] = response["chat_history"]
 else:
-    st.warning("请输入相关的信息)
+    st.warning("请输入相关的信息")
 
 
 if "chat_history" in st.session_state:
