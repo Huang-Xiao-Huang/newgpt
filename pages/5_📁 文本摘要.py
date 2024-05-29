@@ -25,22 +25,20 @@ uploaded_file = st.file_uploader( ":red[🗂]上传文件",type=["PDF","DOCX","T
                                   label_visibility = "visible")
 
 shengc = st.button(" ✏ 生成摘要")
-if chat:
-    if uploaded_file is not None:
-        file_contents  = uploaded_file.getvalue().decode("utf-8")
-        # 将文件内容显示在界面上
-        with st.expander(" 🗂 显示文件内容:"):
-            st.write(file_contents)
-        if shengc:
-            with st.spinner("AI努力创作中，请稍等..."):
-                st.divider()
-                data = zaiyaomodule.Sumary(file_contents, st.session_state["OPENAI_API_KEY"])
-                st.write(f'''{data} :balloon:''')
-   
-    else:
-        st.warning("请重新上传文件...")
+if uploaded_file is not None and chat:
+    file_contents  = uploaded_file.getvalue().decode("utf-8")
+    # 将文件内容显示在界面上
+    with st.expander(" 🗂 显示文件内容:"):
+        st.write(file_contents)
+    if shengc:
+        with st.spinner("AI努力创作中，请稍等..."):
+            st.divider()
+            data = zaiyaomodule.Sumary(file_contents, st.session_state["OPENAI_API_KEY"])
+            st.write(f'''{data} :balloon:''')
+
 else:
-    st.warning("请在首页输入api-key")
+    st.warning("请重新上传文件...")
+
 
 
 
