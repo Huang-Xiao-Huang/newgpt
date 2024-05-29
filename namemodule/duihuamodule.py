@@ -9,7 +9,7 @@ memory = ConversationBufferMemory(return_messages=True)
 # memory = ConversationSummaryBufferMemory(max_token_limit=1000,return_messages=True)
 def get_chat_response(prompt,openai_api_key):
     #模型
-    model = ChatOpenAI(model="gpt-4-turbo",openai_api_key=openai_api_key,
+    model = ChatOpenAI(model="gpt-3.5-turbo",openai_api_key=openai_api_key,
                                            openai_api_base="https://api.aigc369.com/v1")
     #记忆
     chain = ConversationChain(llm=model,memory=memory)
@@ -21,7 +21,7 @@ def get_chat_response(prompt,openai_api_key):
 
 
 def get_chat_response(prompt, memory, openai_api_key):
-    model = ChatOpenAI(model="gpt-4-turbo", openai_api_key=openai_api_key,
+    model = ChatOpenAI(model="gpt-3.5-turbo", openai_api_key=openai_api_key,
                        openai_api_base="https://api.aigc369.com/v1")
     chain = ConversationChain(llm=model, memory=memory)
     response = chain.invoke({"input": prompt})
