@@ -131,17 +131,17 @@ with col5:
 
 col6,col7, col8,col9,col10 = st.columns(5)
 with col6:
-    st.page_link("pages/8_📝 简历书写.py", label="简历书写 ", icon="9️⃣")
+    st.page_link("pages/8_📝 简历书写.py", label="简历书写 ", icon="7️⃣")
 
 st.markdown("##### 🕶 挑选图片面具")
 col11, col12, col13, col14, col15 = st.columns(5)
 
 
 with col11:
-    st.page_link("pages/6_💟 图片描述.py"  ,label="图片描述", icon="7️⃣")
+    st.page_link("pages/6_💟 图片描述.py"  ,label="图片描述", icon="8️⃣")
 
 with col12:
-    st.page_link("pages/7_🖼 以文生图.py"  ,label="以文生图", icon="8️⃣")
+    st.page_link("pages/7_🖼 以文生图.py"  ,label="以文生图", icon="9️⃣")
 
 
 #============面具样式设计部分=============================
