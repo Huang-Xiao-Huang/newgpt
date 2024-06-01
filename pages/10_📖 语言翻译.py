@@ -40,7 +40,6 @@ target_lang = st.selectbox('选择目标语言', ['英语', '中文', '法语', 
 text_to_translate = st.text_area('请输入文本',height=200)
 st.session_state['input_text']  = text_to_translate
     
-
 # 开始按钮
 transbutton = st.button("开始翻译")
 
@@ -51,7 +50,25 @@ if transbutton:
             st.session_state['text_area_content'] = dats
             st.experimental_rerun() #实现实时刷新和数据更新
             st.success("翻译成功")
-st.driver()
+            
+#分割线
+st.markdown(
+    """
+    <style>
+    .custom-divider {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-top: 1px solid red;
+        color:red;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
+
+#显示原文和翻译结果
 col1,col2 = st.columns(2)
 with col1:
     st.write("原文")
