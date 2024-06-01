@@ -50,4 +50,5 @@ if transbutton:
             dats = translate_text(text_to_translate,source_lang,target_lang,chat)
             st.session_state['text_area_content'] = dats
             #st.experimental_rerun() #实现实时刷新和数据更新
+            st.stop()
 
