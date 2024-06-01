@@ -23,7 +23,7 @@ chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"],
                                          openai_api_base="https://api.aigc369.com/v1")
 
 
-def save_uploaded_files(uploaded_files, directory="../uploaded_images/"):
+def save_uploaded_files(uploaded_files, directory="./uploaded_images/"):
     # 清空保存目录函数
     def clear_upload_directory(directory):
         if os.path.exists(directory):
