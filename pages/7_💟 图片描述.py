@@ -4,7 +4,7 @@ import os
 from PIL import Image
 import sys
 
-sys.path.append('../namemodule')
+
 
 
 #图片分类
