@@ -51,6 +51,7 @@ if transbutton:
             st.session_state['text_area_content'] = dats
             st.experimental_rerun() #实现实时刷新和数据更新
             st.success("翻译成功")
+st.driver()
 col1,col2 = st.columns(2)
 with col1:
     st.write("原文")
