@@ -57,7 +57,7 @@ st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
 if "memory" not in st.session_state:
     st.session_state["memory"] = ConversationBufferMemory(return_messages=True)
     st.session_state["messages"] = [{"role": "ai",
-                                     "content": "万能对话机器人"}]
+                                     "content": "智能对话"}]
 col1 = st.columns(20)
 with col1[0]:
     st.page_link("./首页.py", label='', icon="⚙",help="设置")
