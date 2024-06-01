@@ -33,6 +33,6 @@ def get_chat_response(prompt, memory, openai_api_key):
 
 if __name__ == "__main__":
     memory = ConversationBufferMemory(return_messages=True)
-    ai_answer = get_chat_response("月亮什么时候最圆？",  "sk-8DdVVv5xOLRoSdLN5d1274Dc70514a40Be4684F7C152F04c")
+    ai_answer = get_chat_response("月亮什么时候最圆？",  "sk-8DdVVv5xOLRoSdLN5d1274Dc7050Be4684F7C152F04c")
     print(ai_answer)
-    print(get_chat_response("我刚才问了什么问题", "sk-8DdVVv5xOLRoSdLN5d1274Dc70514a40Be4684F7C152F04c"))
+    print(get_chat_response("我刚才问了什么问题", "sk-8DdVVv5xOLRoSdLN5d1274Dc70514a40Be46152F04c"))
