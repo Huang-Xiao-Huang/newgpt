@@ -1,7 +1,7 @@
 from langchain_openai import  ChatOpenAI
 import streamlit as st
 import os
-from PIL import Image
+#from PIL import Image
 import sys
 
 
