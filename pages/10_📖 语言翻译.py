@@ -53,7 +53,7 @@ if transbutton:
             st.success("翻译成功")
 col1,col2 = st.columns(2)
 with col1:
-    st.markdown("#### 原文")
+    st.markdown("##### 原文")
     st.write(st.session_state['input_text'])
 with col2:
     transt = st.text_area('翻译的结果', st.session_state['text_area_content'],height=200)
