@@ -21,7 +21,8 @@ def main():
     # </style>
     # """, unsafe_allow_html=True)
     # 选择要读取的文件夹
-    folder_path = st.text_input('📷 输入文件夹路径')
+    # folder_path = st.text_input(' 输入文件夹路径')
+    folder_path = st.file_uploader("📷 选择文件", accept_multiple_files=True)
     # folder_path = rf'{folder_path}'
     print(folder_path)
     # 文件名字分类
