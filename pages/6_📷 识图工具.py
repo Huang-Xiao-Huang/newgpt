@@ -7,7 +7,7 @@ import os
 import shutil
 
 sys.path.append('../namemodule')
-from namemodule.shitumodule2 import  shiTu
+from namemodule.shitumodule import  shiTu
 
 
 #图片分类
