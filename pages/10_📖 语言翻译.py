@@ -38,7 +38,7 @@ col1,col2 = st.columns(2)
 with col1:
     # 创建一个文本输入区域，用户可以在其中输入要翻译的文本
     text_to_translate = st.text_area('请输入文本',height=200)
-    st.session_state['input_text'] = text_to_translate
+    
 with col2:
 
     transt = st.text_area('翻译的结果', st.session_state['text_area_content'],height=200)
@@ -48,6 +48,7 @@ transbutton = st.button("开始翻译")
 if transbutton:
     if text_to_translate and source_lang and target_lang and chat:
         with st.spinner("正在翻译..."):
+            st.session_state['input_text'] = text_to_translate
             dats = translate_text(text_to_translate,source_lang,target_lang,chat)
             st.session_state['text_area_content'] = dats
     st.experimental_rerun() #实现实时刷新和数据更新
