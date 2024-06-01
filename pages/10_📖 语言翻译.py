@@ -34,10 +34,11 @@ source_lang = st.selectbox('选择源语言', ['自动检测', '英语', '中文
 
 # 创建一个下拉选择框，用户可以选择目标语言
 target_lang = st.selectbox('选择目标语言', ['英语', '中文', '法语', '德语', '日语'])
-col1,col2 = st.columns(2)
-with col1:
-    # 创建一个文本输入区域，用户可以在其中输入要翻译的文本
-    text_to_translate = st.text_area('请输入文本',height=200)
+# col1,col2 = st.columns(2)
+# with col1:
+# 创建一个文本输入区域，用户可以在其中输入要翻译的文本
+text_to_translate = st.text_area('请输入文本',height=200)
+st.session_state['input_text']  = text_to_translate
     
 
 # 开始按钮
@@ -50,7 +51,9 @@ if transbutton:
             st.session_state['text_area_content'] = dats
             st.experimental_rerun() #实现实时刷新和数据更新
             st.success("翻译成功")
-        
+col1,col2 = st.columns(2)
+with col1:
+    text_to_translate = st.text_area(st.session_state['input_text'],height=200)
 with col2:
     transt = st.text_area('翻译的结果', st.session_state['text_area_content'],height=200)
 
