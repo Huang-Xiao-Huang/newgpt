@@ -14,3 +14,5 @@ def shTu(client,number,Prompt):
         image_data.append(image_url)
     return image_data
             # print("Generated image:", image_url)
+
+
