@@ -48,10 +48,9 @@ transbutton = st.button("开始翻译")
 if transbutton:
     if text_to_translate and source_lang and target_lang and chat:
         with st.spinner("正在翻译..."):
-            st.session_state['input_text'] = text_to_translate
             dats = translate_text(text_to_translate,source_lang,target_lang,chat)
             st.session_state['text_area_content'] = dats
-            # st.experimental_rerun() #实现实时刷新和数据更新
+            st.experimental_rerun() #实现实时刷新和数据更新
             st.success("翻译成功")
         
 
