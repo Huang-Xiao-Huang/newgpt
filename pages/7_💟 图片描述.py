@@ -16,8 +16,7 @@ elif st.session_state["OPENAI_API_KEY"] != '':
 st.set_page_config(page_title="图片描述",layout="wide")
 st.title("Too酷 :red[图片描述]")
 st.subheader("🤫 图片描述 🤫")
-chat = ChatOpenAI(openai_api_key=st.session_state["OPENAI_API_KEY"],
-                                         openai_api_base="https://api.aigc369.com/v1")
+
 
 def main():
     folder_path = st.text_input("请输入图片链接")
