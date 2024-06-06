@@ -40,7 +40,7 @@ if data:
     # st.session_state["df"] = pd.read_csv(data)
     dataw = pd.read_csv(data)
     with st.expander("源数据"):
-        st.dataframe(st.session_state["df"])
+        st.dataframe(dataw)
 
 # query = st.text_area("请输入你的问题：")
 # button = st.button("生成回答")
