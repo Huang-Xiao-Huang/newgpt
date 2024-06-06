@@ -23,7 +23,7 @@ st.subheader(":red[📖] 分析工具")
 #     chat = ChatOpenAI(model="gpt-3.5-turbo",openai_api_base="https://api.aigc369.com/v1",
 #                                           openai_api_key = "sk-8DdVVv5xOLRoSdLN5d1274Dc70514a40Be4684F7C152F04c")
 if "df" not in st.session_state:
-#     st.session_state["df"] = ''
+    st.session_state["df"] = ''
 
 
 # def create_chart(input_data, chart_type):
