@@ -21,10 +21,12 @@ st.subheader("🤫 图片描述 🤫")
 def main():
     folder_path = st.text_input("请输入图片链接")
     if st.button("🖼 开始描述") and st.session_state["OPENAI_API_KEY"]:
+        st.write("显示图片")
         st.image(folder_path)
         with st.spinner("⌛图片描述生成中..."):
             result = imagedescribe.im_describe(folder_path,st.session_state["OPENAI_API_KEY"])
-            st.text(result)
+            st.write("显示图片描述信息")
+            st.text_area(result)
     else:
         st.warning("请在首页输入api_key")
 main()
