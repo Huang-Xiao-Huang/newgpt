@@ -37,7 +37,8 @@ def create_chart(input_data, chart_type):
 
 data = st.file_uploader("上传你的数据文件（csv格式）：", type="csv")
 if data:
-    st.session_state["df"] = pd.read_csv(data)
+    # st.session_state["df"] = pd.read_csv(data)
+    dataw = pd.read_csv(data)
     with st.expander("源数据"):
         st.dataframe(st.session_state["df"])
 
