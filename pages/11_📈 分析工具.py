@@ -11,7 +11,7 @@ sys.path.append('../namemodule')
 st.set_page_config(page_title="分析工具",layout="wide")
 
 st.title("Too酷 :red[分析工具]")
-st.subheader(":red[📖] 智能数据分析工具")
+st.subheader(":red[📖] 分析工具")
 
 #有记忆对话的机器人版本
 chat = None
