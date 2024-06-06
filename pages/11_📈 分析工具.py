@@ -14,30 +14,31 @@ st.title("Too酷 :red[分析工具]")
 st.subheader(":red[📖] 分析工具")
 
 #有记忆对话的机器人版本
-chat = None
+# chat = None
 #如果openai没有在会话中(会话的作用是存储一些历史信息),则设置为空
-if "OPENAI_API_KEY" not in st.session_state:
-    st.session_state["OPENAI_API_KEY"] = ''
-    st.warning("请在首页输入OPENAI_API_KEY")
-elif st.session_state["OPENAI_API_KEY"] != '':
-    chat = ChatOpenAI(model="gpt-3.5-turbo",openai_api_base="https://api.aigc369.com/v1",
-                                          openai_api_key = "sk-8DdVVv5xOLRoSdLN5d1274Dc70514a40Be4684F7C152F04c")
+# if "OPENAI_API_KEY" not in st.session_state:
+#     st.session_state["OPENAI_API_KEY"] = ''
+#     st.warning("请在首页输入OPENAI_API_KEY")
+# elif st.session_state["OPENAI_API_KEY"] != '':
+#     chat = ChatOpenAI(model="gpt-3.5-turbo",openai_api_base="https://api.aigc369.com/v1",
+#                                           openai_api_key = "sk-8DdVVv5xOLRoSdLN5d1274Dc70514a40Be4684F7C152F04c")
+if "df" not in st.session_state:
+#     st.session_state["df"] = ''
 
 
-
-def create_chart(input_data, chart_type):
-    df_data = pd.DataFrame(input_data["data"], columns=input_data["columns"])
-    df_data.set_index(input_data["columns"][0], inplace=True)
-    if chart_type == "bar":
-        st.bar_chart(df_data)
-    elif chart_type == "line":
-        st.line_chart(df_data)
-    elif chart_type == "scatter":
-        st.scatter_chart(df_data)
+# def create_chart(input_data, chart_type):
+#     df_data = pd.DataFrame(input_data["data"], columns=input_data["columns"])
+#     df_data.set_index(input_data["columns"][0], inplace=True)
+#     if chart_type == "bar":
+#         st.bar_chart(df_data)
+#     elif chart_type == "line":
+#         st.line_chart(df_data)
+#     elif chart_type == "scatter":
+#         st.scatter_chart(df_data)
 
 data = st.file_uploader("上传你的数据文件（csv格式）：", type="csv")
 if data:
-    # st.session_state["df"] = pd.read_csv(data)
+    st.session_state["df"] = pd.read_csv(data)
     dataw = pd.read_csv(data)
     with st.expander("源数据"):
         st.dataframe(dataw)
