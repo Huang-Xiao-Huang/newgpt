@@ -39,10 +39,10 @@ def create_chart(input_data, chart_type):
 data = st.file_uploader("上传你的数据文件（csv格式）：", type="csv")
 if data:
     st.session_state["df"] = pd.read_csv(data)
-    with st.expander("原始数据"):
+    with st.expander("源数据"):
         st.dataframe(st.session_state["df"])
 
-query = st.text_area("请输入你关于以上表格的问题，或数据提取请求，或可视化要求（支持散点图、折线图、条形图）：")
+query = st.text_area("请输入你的问题：")
 button = st.button("生成回答")
 
 if button and not st.session_state["OPENAI_API_KEY"]:
@@ -51,7 +51,7 @@ if button and "df" not in st.session_state:
     st.info("请先上传数据文件")
 if button and st.session_state["OPENAI_API_KEY"] and "df" in st.session_state:
     with st.spinner("AI正在思考中，请稍等..."):
-        response_dict = dataframe_agent(st.session_state["OPENAI_API_KEY"], st.session_state["df"], query)
+        response_dict = #dataframe_agent(st.session_state["OPENAI_API_KEY"], st.session_state["df"], query)
         if "answer" in response_dict:
             st.write(response_dict["answer"])
         if "table" in response_dict:
