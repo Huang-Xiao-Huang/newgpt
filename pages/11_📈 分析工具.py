@@ -39,9 +39,9 @@ if "df" not in st.session_state:
 data = st.file_uploader("上传你的数据文件（csv格式）：", type="csv")
 if data:
     st.session_state["df"] = pd.read_csv(data)
-    dataw = pd.read_csv(data)
+    # dataw = pd.read_csv(data)
     with st.expander("源数据"):
-        st.dataframe(dataw)
+        st.dataframe( st.session_state["df"])
 
 # query = st.text_area("请输入你的问题：")
 # button = st.button("生成回答")
