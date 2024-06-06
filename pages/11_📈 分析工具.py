@@ -5,7 +5,7 @@ import pandas as pd
 #导入相关的包
 import sys
 sys.path.append('../namemodule')
-from namemodule.dataprocessmodule import dataframe_agent
+# from namemodule.dataprocessmodule import dataframe_agent
 
 # 设置Streamlit应用的标题
 st.set_page_config(page_title="分析工具",layout="wide")
