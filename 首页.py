@@ -147,42 +147,44 @@ st.markdown('<div class="custom-divider"></div>', unsafe_allow_html=True)
 st.markdown("##### 🕶 文字功能")
 col1, col2, col3, col4, col5, col6 = st.columns(6)
 with col1:
-    st.page_link("pages/1_💬 智能对话.py", label=" 智能对话 ", icon="1️⃣")
+    st.page_link("pages/1_💬 智能对话.py", label=" 智能对话 ", icon="💬")
 
 with col2:
-    st.page_link("pages/2_📕 小红书文案.py", label="小红书文案 ", icon="2️⃣")
+    st.page_link("pages/2_📕 小红书文案.py", label="小红书文案 ", icon="📕")
 
 with col3:
-    st.page_link("pages/3_📺 视频文案.py", label=" 视频文案 ", icon="3️⃣")
+    st.page_link("pages/3_📺 视频文案.py", label=" 视频文案 ", icon="📺")
 
 with col4:
-    st.page_link("pages/4_📔 文档问答.py", label=" PDF问答 ", icon="4️⃣")
+    st.page_link("pages/4_📔 文档问答.py", label=" PDF问答 ", icon="📔")
 
 with col5:
-    st.page_link("pages/5_📁 文本摘要.py", label=" 文本摘要 ", icon="5️⃣")
+    st.page_link("pages/5_📁 文本摘要.py", label=" 文本摘要 ", icon="📁")
 
 col6, col7, col8, col9, col10, col11 = st.columns(6)
 with col6:
-    st.page_link("./pages/9_📝 简历书写.py", label="简历书写 ", icon="6️⃣")
+    st.page_link("./pages/9_📝 简历书写.py", label="简历书写 ", icon="📝")
 with col7:
-    st.page_link("./pages/10_📖 语言翻译.py", label="语言翻译 ", icon="7️⃣")
+    st.page_link("./pages/10_📖 语言翻译.py", label="语言翻译 ", icon="📖")
 
 st.markdown("##### 🕶 图片功能")
 col11, col12, col13, col14, col15 = st.columns(5)
 with col11:
-    st.page_link("pages/6_📷 识图工具.py", label=" 识图工具 ", icon="6️⃣")
+    st.page_link("pages/6_📷 识图工具.py", label=" 识图工具 ", icon="📷")
 
 with col12:
-    st.page_link("pages/7_💟 图片描述.py", label="图片描述", icon="8️⃣")
+    st.page_link("pages/7_💟 图片描述.py", label="图片描述", icon="💟")
 
 with col13:
-    st.page_link("pages/8_🖼 以文生图.py", label="以文生图", icon="9️⃣")
+    st.page_link("pages/8_🖼 以文生图.py", label="以文生图", icon="🖼")
 
 
 st.markdown("##### 🕶 智能工具")
 cola, col1b, col1c, col1d, col1e = st.columns(5)
 with cola:
-    st.page_link("pages/11_📈 分析工具.py", label="分析工具", icon="9️⃣")
+    st.page_link("pages/11_📈 分析工具.py", label="分析工具", icon="📈")
+with col1b:
+    st.page_link("pages/12_🎵 音乐生成.py", label="音频生成", icon="🎵")
 
 
 
