@@ -74,7 +74,7 @@ if bttons  and  st.session_state["OPENAI_API_KEY"]:
             xianshitu(image_data)
     elif model_image[0] == "midjourney":
         with st.spinner("⌛ 图片生成中..."):
-            image_data = shengtumodule.shiMID(client,number,Prompt)
+            image_data = shengtumodule.shiMID('hello',number,Prompt)
             xianshitu(image_data)
 
 
