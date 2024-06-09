@@ -31,10 +31,11 @@ def shiMID(client,number,Prompt):
             "prompt": Prompt
         }
 
-        response = requests.post(url, json=payload, headers=headers).text
-        derw = re.compile('"image_url":"(.*?)"', re.S)
-        print(derw)
-        iamge_url = re.findall(derw, response)[0]
+        response = requests.post(url, json=payload, headers=headers).json
+        # derw = re.compile('"image_url":"(.*?)"', re.S)
+        # print(derw)
+        # iamge_url = re.findall(derw, response)[0]
         # print(e)
-        image_data.append(iamge_url)
+        # image_data.append(iamge_url)
+        image_data.append(response["image_url"])
     return  image_data
