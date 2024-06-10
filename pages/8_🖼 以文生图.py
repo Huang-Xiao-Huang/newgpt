@@ -43,11 +43,14 @@ elif st.session_state["OPENAI_API_KEY"] != '':
 
 
 
-model_image =  st.multiselect(
-    '选择模型与工具',
-    ["dall-e-2", "midjourney"],
-    ["dall-e-2"]
-)
+# model_image =  st.multiselect(
+#     '选择模型与工具',
+#     ["dall-e-2", "midjourney"],
+#     ["dall-e-2"]
+# )
+model_image = st.selectbox(
+    '选择模型或工具',
+    ("dall-e-2", "midjourney"))
 options = st.multiselect(
     '请你选择生成图像的风格',
     ["插画风格", "黑白摄影风格", "自然风景风格",
@@ -68,11 +71,11 @@ print(Prompt)
 
 if bttons  and  st.session_state["OPENAI_API_KEY"]:
     # try:
-    if model_image[0] == "dall-e-2":
+    if model_image == "dall-e-2":
         with st.spinner("⌛ 图片生成中..."):
             image_data = shengtumodule.shTu(client,number,Prompt)
             xianshitu(image_data)
-    elif model_image[0] == "midjourney":
+    elif model_image == "midjourney":
         with st.spinner("⌛ 图片生成中..."):
             image_data = shengtumodule.shiMID('hello',number,Prompt)
             xianshitu(image_data)
