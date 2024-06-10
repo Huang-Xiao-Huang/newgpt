@@ -29,7 +29,7 @@ st.title("Too酷 :red[以文生图]")
 st.subheader(":red[🖼] 智能图片生成")
 st.write("你想要的图片这里都有")
 st.divider() #分割线
-client = None
+
 #如果openai没有在会话中(会话的作用是存储一些历史信息),则设置为空
 if "OPENAI_API_KEY" not in st.session_state:
     st.session_state["OPENAI_API_KEY"] = ''
